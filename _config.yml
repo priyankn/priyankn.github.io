@@ -4,17 +4,3 @@ title: Priyank's Website
 author: Priyank
 
  
-  
-  exclude:
-  - CHANGELOG.md
-  - CNAME
-  - Gemfile
-  - Gemfile.lock
-  - LICENSE
-  - README.md
-  - screenshot.png
-  - docs/
-  
-  plugins:
-  - jekyll-paginate
-  - jekyll-sitemap
