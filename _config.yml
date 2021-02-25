@@ -1,2 +1,33 @@
-name: Priyank's Site
-title: null
+title: Priyank's Website
+
+# Your name to show in the footer
+author: Priyank
+
+# --- List of links in the navigation bar --- #
+
+navbar-links:
+  About Me: "aboutme"
+  Resources:
+    - Beautiful Jekyll: "YOLO"
+    - Learn markdown: "https://www.markdowntutorial.com/"
+  Author's home: "https://google.com"
+  
+  social-network-links:
+  email: "someone@example.com"
+  github: priyankn
+  twitter: 
+  
+  
+  exclude:
+  - CHANGELOG.md
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - screenshot.png
+  - docs/
+  
+  plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
