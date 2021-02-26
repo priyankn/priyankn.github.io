@@ -15,10 +15,6 @@ author: Priyank
 
 navbar-links:
   About Me: "aboutme"
-  Resources:
-    - Beautiful Jekyll: "YOLO"
-    - Learn markdown: "https://www.markdowntutorial.com/"
-  Author's home: "https://google.com"
 
 # --- Logo --- #
 
@@ -41,7 +37,7 @@ round-avatar: true
 social-network-links:
   email: "someone@example.com"
   github: priyankn
-  twitter: 
+  twitter: Rev_Octo
 
 #  medium: yourname
 #  reddit: yourname
