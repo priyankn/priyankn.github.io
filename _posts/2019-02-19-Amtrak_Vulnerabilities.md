@@ -333,11 +333,11 @@ As highlighted above, the response contained the eVoucher code, which could now 
 This issue has been resolved server-side. 
 
 ## Timeline
-01/12/2019: Initial discovery
-01/14/2019: Contact with vendor
-01/15/2019: Vendor acknowledged vulnerabilities
-02/13/2019: Vendor patched their application server
-02/19/2019: Vulnerabilities publicly disclosed
+* 01/12/2019: Initial discovery
+* 01/14/2019: Contact with vendor
+* 01/15/2019: Vendor acknowledged vulnerabilities
+* 02/13/2019: Vendor patched their application server
+* 02/19/2019: Vulnerabilities publicly disclosed
 
 ## Researcher
 Priyank Nigam, Security Researcher (Bishop Fox)
