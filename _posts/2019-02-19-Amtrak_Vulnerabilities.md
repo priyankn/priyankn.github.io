@@ -324,7 +324,8 @@ Content-Type: application/json
 
 As highlighted above, the response contained the eVoucher code, which could now be successfully used to buy a new ticket by any person. The below screenshot shows an attacker applying an eVoucher via a guest account:
 
-![Advisory-Amtrak-1](https://raw.githubusercontent.com/priyankn/priyankn.github.io/master/assets/img/Advisory-Amtrak-1.PNG)
+
+![Advisory-Amtrak-1](https://raw.githubusercontent.com/priyankn/priyankn.github.io/master/assets/img/Advisory-Amtrak-1.png)
 
 
 ## Solution
