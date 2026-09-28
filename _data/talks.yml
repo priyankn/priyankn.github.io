@@ -3,7 +3,7 @@
 # spaces and other unsafe characters are URL-escaped at build time.
 
 - year: 2025
-  venue: "Insomni'Hack"
+  venue: "Insomni'Hack and TROOPERS25"
   title: "Beyond LSASS: Cutting-Edge Techniques for Undetectable Threat Emulation"
   desc: "Entra ID credential-access tradecraft that avoids the detections built around LSASS."
   file: "EntraId_Cutting_Edge_Techniques_for_Undetectable_Threat_Emulation_Priyank_InsomniHack_2025.pdf"
@@ -15,7 +15,7 @@
   file: "Advanced_Techniques_for_hunting_and_securing_user_registration_vulnerabilities_Priyank_Nsec_Securityfest_2024.pdf"
 
 - year: 2023
-  venue: "BSidesLV"
+  venue: "BSides Las Vegas"
   title: "Breaking Business As Usual: Attacking Android Enterprise Solutions"
   desc: "Attacking Android enterprise management stacks, from enrollment through policy enforcement."
   file: "Breaking_Business_As_Usual_Attacking_Android_Enterprise_Solutions_BsidesLV_2023.pdf"
@@ -27,7 +27,7 @@
   file: "Throw_Your_(App)Integrity_Out_the_Window_Bypassing_Device_Integrity_Checks_iOS_Priyank_Nigam_BsidesSeattle_2023.pdf"
 
 - year: 2019
-  venue: "BSidesLV"
+  venue: "BSides Las Vegas"
   title: "Reverse Engineering Mobile Transit Applications"
-  desc: "The research behind the Amtrak and Greyhound mobile API disclosures."
+  desc: "The research behind the reverse engineering mobile ticketing solutions."
   file: "BsidesLV 2019_Priyank_RE_Mobile_Transit_Final.pdf"
