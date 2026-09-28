@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Security Blog Post
-subtitle: Authentication Bypass in Mobile APIs
+title: Authentication Bypass in Mobile APIs
+subtitle: Greyhound Road Rewards - coordinated disclosure
 cover-img: /assets/img/path1.jpg
 tags: [blog]
 comments: true

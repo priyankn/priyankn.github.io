@@ -1,4 +1,69 @@
 ---
-layout: home
-title: Offensive Security Notes
+layout: landing
+title: Priyank Nigam
+subtitle: Offensive security research, and security engineering notes
+nav-short: true
+show-avatar: false
+css:
+  - "/assets/css/landing.css"
 ---
+
+<div class="lp-hero">
+  <div class="lp-idrow">
+    {% if site.avatar %}
+      <img class="lp-avatar" src="{{ site.avatar | relative_url }}" alt="{{ page.title | escape }}">
+    {% endif %}
+    <div>
+      <h1 class="lp-name">{{ page.title | escape }}</h1>
+      <div class="lp-role">{{ page.subtitle | escape }}</div>
+      <div class="lp-links">
+        {% if site.social-network-links.github %}
+          <a href="https://github.com/{{ site.social-network-links.github }}"><i class="fab fa-github"></i>GitHub</a>
+        {% endif %}
+        {% if site.social-network-links.twitter %}
+          <a href="https://twitter.com/{{ site.social-network-links.twitter }}"><i class="fab fa-twitter"></i>Twitter</a>
+        {% endif %}
+        <a href="{{ '/feed.xml' | relative_url }}"><i class="fas fa-rss"></i>RSS</a>
+      </div>
+    </div>
+  </div>
+
+  <p class="lp-bio">
+    I work on identity, application security, and red teaming finding the flaws, exploiting them
+    and getting them fixed. I talk about a subset of them due to [reasons]. Conference talks and
+    slide decks below, alongside advisories and long-form technical breakdowns.
+  </p>
+</div>
+
+<div class="lp-sec" id="talks">
+  <h2>Talks</h2>
+  <span class="lp-count">{{ site.data.talks | size }}</span>
+</div>
+
+{% for talk in site.data.talks %}
+  {% assign slides = talk.file | prepend: site.talks_repo | uri_escape %}
+  <div class="lp-row">
+    <div class="lp-when">{{ talk.year }}</div>
+    <div class="lp-body">
+      <h3 class="lp-title"><a href="{{ slides }}">{{ talk.title | escape }}</a></h3>
+      <div class="lp-meta">{{ talk.venue | escape }}</div>
+      {% if talk.desc %}<p class="lp-desc">{{ talk.desc | escape }}</p>{% endif %}
+      <a class="lp-pdf" href="{{ slides }}"><i class="fas fa-file-pdf"></i> Slides</a>
+    </div>
+  </div>
+{% endfor %}
+
+<div class="lp-sec" id="writing">
+  <h2>Writing &amp; Advisories</h2>
+  <span class="lp-count">{{ site.posts | size }}</span>
+</div>
+
+{% for post in site.posts %}
+  <div class="lp-row">
+    <div class="lp-when">{{ post.date | date: "%Y" }}</div>
+    <div class="lp-body">
+      <h3 class="lp-title"><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
+      {% if post.subtitle %}<div class="lp-meta">{{ post.subtitle | escape }}</div>{% endif %}
+    </div>
+  </div>
+{% endfor %}

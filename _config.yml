@@ -14,6 +14,8 @@ author: Priyank
 # --- List of links in the navigation bar --- #
 
 navbar-links:
+  Talks: "#talks"
+  Writing: "#writing"
   About Me: "aboutme"
 
 # --- Logo --- #
@@ -171,6 +173,9 @@ footer-link-col: "#404040"
 # Ruby Date Format to show dates of posts
 date_format: "%B %-d, %Y"
 
+# Base URL for slide decks listed in _data/talks.yml
+talks_repo: "https://github.com/priyankn/Talks-Publications/blob/master/"
+
 # Facebook App ID
 #fb_app_id: ""
 
@@ -181,7 +186,6 @@ timezone: "America/Toronto"
 markdown: kramdown
 highlighter: rouge
 permalink: /:year-:month-:day-:title/
-paginate: 5
 
 kramdown:
   input: GFM

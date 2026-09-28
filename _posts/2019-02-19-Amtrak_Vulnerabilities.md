@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Security Blog Post  
-subtitle: Amtrak Mobile APIs - Multiple Vulnerabilities
+title: Amtrak Mobile APIs - Multiple Vulnerabilities
+subtitle: Coordinated disclosure
 cover-img: /assets/img/path1.jpg
 tags: [blog]
 comments: true
