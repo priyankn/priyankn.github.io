@@ -207,6 +207,8 @@ defaults:
       layout: "page"
 
 # Exclude these files from production site
+# A custom list replaces Jekyll's defaults rather than extending them, so the
+# vendor entries have to be repeated or CI would build the installed gems.
 exclude:
   - CHANGELOG.md
   - CNAME
@@ -216,6 +218,10 @@ exclude:
   - README.md
   - screenshot.png
   - docs/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
 
 plugins:
   - jekyll-paginate
