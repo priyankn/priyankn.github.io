@@ -18,6 +18,10 @@ navbar-links:
   Writing: "#writing"
   About Me: "aboutme"
 
+# Rendered inside the navbar, outside the collapsible menu, so it stays visible on mobile
+navbar-extra:
+  - theme-toggle.html
+
 # --- Logo --- #
 
 # Image to show in the navigation bar - works best with a square image
@@ -110,8 +114,8 @@ footer-link-col: "#404040"
 #mobile-theme-col: "#0085A1"
 
 # For any extra visual customization, you can include additional CSS files in every page on your site. List any custom CSS files here
-#site-css:
-#  - "/assets/css/custom-styles.css"
+site-css:
+  - "/assets/css/dark-mode.css"
 
 # If you have common JavaScript files that should be included in every page, list them here
 #site-js:
@@ -191,6 +195,8 @@ kramdown:
   input: GFM
 
 # Default YAML values (more information on Jekyll's site)
+# head-extra is set on both scopes so the theme script runs in <head> site-wide,
+# before first paint.
 defaults:
   -
     scope:
@@ -200,11 +206,15 @@ defaults:
       layout: "post"
       comments: true  # add comments to all blog posts
       social-share: true # add social media sharing buttons to all blog posts
+      head-extra:
+        - dark-mode-init.html
   -
     scope:
       path: "" # any file that's not a post will be a "page" layout by default
     values:
       layout: "page"
+      head-extra:
+        - dark-mode-init.html
 
 # Exclude these files from production site
 # A custom list replaces Jekyll's defaults rather than extending them, so the

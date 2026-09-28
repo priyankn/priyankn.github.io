@@ -1,0 +1,26 @@
+<button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch to light theme" title="Switch theme">
+  <i class="fas fa-sun" aria-hidden="true"></i>
+</button>
+
+<script>
+  (function () {
+    var root = document.documentElement;
+    var button = document.getElementById('theme-toggle');
+    if (!button) { return; }
+    var icon = button.querySelector('i');
+
+    function paint(theme) {
+      root.setAttribute('data-theme', theme);
+      icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+      button.setAttribute('aria-label', theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
+    }
+
+    paint(root.getAttribute('data-theme') === 'light' ? 'light' : 'dark');
+
+    button.addEventListener('click', function () {
+      var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      try { localStorage.setItem('theme', next); } catch (e) {}
+      paint(next);
+    });
+  })();
+</script>
