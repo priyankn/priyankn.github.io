@@ -1,0 +1,14 @@
+{%- comment -%}
+Runs before first paint so the page never flashes the wrong theme.
+base.html already serves data-theme="dark", so this only flips to light
+when the visitor has previously chosen it.
+{%- endcomment -%}
+<script>
+  (function () {
+    try {
+      if (localStorage.getItem('theme') === 'light') {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    } catch (e) {}
+  })();
+</script>

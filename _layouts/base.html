@@ -20,7 +20,8 @@ common-js:
 ---
 
 <!DOCTYPE html>
-<html lang="{{ page.language | default: site.language | default: 'en' }}">
+<!-- Dark is the served default; dark-mode-init.html flips this to light when chosen. -->
+<html lang="{{ page.language | default: site.language | default: 'en' }}" data-theme="dark">
 <meta name="google-site-verification" content="kcJpzwVePO6ad1_TUD1OBWTC8qXYXl-f0vFPr5d3_QU" />
 {% include head.html %}
 

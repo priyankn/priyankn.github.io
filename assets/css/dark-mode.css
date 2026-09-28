@@ -1,0 +1,260 @@
+/* Dark and light palettes. Additive by design: beautifuljekyll.css is
+   Liquid-processed from the _config.yml colours, so nothing there is edited.
+   The active theme comes from a data-theme attribute on <html>. */
+
+:root {
+  --bj-bg: #ffffff;
+  --bj-surface: #eaeaea;
+  --bj-text: #404040;
+  --bj-muted: #777777;
+  --bj-border: #dddddd;
+  --bj-hairline: #f2f2f2;
+  --bj-link: #008aff;
+  --bj-accent: #0085a1;
+  --bj-code-bg: #f7f7f7;
+  --bj-code-text: #404040;
+  --bj-row-hover: #fafafa;
+}
+
+/* Typed against html so it outranks :root regardless of source order. */
+html[data-theme="dark"] {
+  --bj-bg: #16191d;
+  --bj-surface: #1b1f24;
+  --bj-text: #d8dbe0;
+  --bj-muted: #9aa2ad;
+  --bj-border: #2a2f36;
+  --bj-hairline: #23272d;
+  --bj-link: #63b8e8;
+  --bj-accent: #4fc3dd;
+  --bj-code-bg: #1a1e23;
+  --bj-code-text: #dfe3e8;
+  --bj-row-hover: #1d2127;
+}
+
+html,
+body {
+  background-color: var(--bj-bg);
+  color: var(--bj-text);
+}
+
+a {
+  color: var(--bj-link);
+}
+
+a:hover,
+a:focus {
+  color: var(--bj-accent);
+}
+
+/* --- navbar --- */
+.navbar-custom {
+  background-color: var(--bj-surface);
+  border-bottom-color: var(--bj-border);
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-nav .nav-link {
+  color: var(--bj-text);
+}
+
+.navbar-custom .navbar-brand:hover,
+.navbar-custom .navbar-nav .nav-link:hover {
+  color: var(--bj-accent);
+}
+
+[data-theme="dark"] .navbar-custom .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(216,219,224,0.85)' stroke-width='2' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+[data-theme="dark"] .navbar-custom .dropdown-menu {
+  background-color: var(--bj-surface);
+  border-color: var(--bj-border);
+}
+
+[data-theme="dark"] .navbar-custom .dropdown-item {
+  color: var(--bj-text);
+}
+
+[data-theme="dark"] .navbar-custom .dropdown-item:hover {
+  background-color: var(--bj-row-hover);
+  color: var(--bj-accent);
+}
+
+/* --- page furniture --- */
+.intro-header,
+.intro-header.no-img {
+  background-color: transparent;
+}
+
+hr,
+.intro-header .page-heading hr {
+  border-color: var(--bj-border);
+}
+
+blockquote {
+  color: var(--bj-muted);
+  border-left-color: var(--bj-border);
+}
+
+table,
+table th,
+table td {
+  border-color: var(--bj-border) !important;
+}
+
+[data-theme="dark"] table th {
+  background-color: var(--bj-surface);
+}
+
+[data-theme="dark"] .post-meta,
+[data-theme="dark"] .post-subtitle,
+[data-theme="dark"] .page-subheading,
+[data-theme="dark"] .post-entry {
+  color: var(--bj-muted);
+}
+
+[data-theme="dark"] .post-preview {
+  border-bottom-color: var(--bj-border);
+}
+
+[data-theme="dark"] .blog-tags a {
+  color: var(--bj-link);
+}
+
+/* --- code --- */
+pre,
+code {
+  background-color: var(--bj-code-bg);
+  color: var(--bj-code-text);
+}
+
+[data-theme="dark"] pre,
+[data-theme="dark"] .highlight,
+[data-theme="dark"] .highlighter-rouge .highlight {
+  background-color: var(--bj-code-bg);
+  border-color: var(--bj-border);
+}
+
+/* Rouge tokens, retuned for the dark background. */
+[data-theme="dark"] .highlight .c,
+[data-theme="dark"] .highlight .c1,
+[data-theme="dark"] .highlight .cm { color: #6f7b88; }
+[data-theme="dark"] .highlight .k,
+[data-theme="dark"] .highlight .kd,
+[data-theme="dark"] .highlight .kn { color: #c698e0; }
+[data-theme="dark"] .highlight .s,
+[data-theme="dark"] .highlight .s1,
+[data-theme="dark"] .highlight .s2 { color: #9ad18b; }
+[data-theme="dark"] .highlight .nt { color: #63b8e8; }
+[data-theme="dark"] .highlight .na { color: #e3c07b; }
+[data-theme="dark"] .highlight .nf { color: #74c0d8; }
+[data-theme="dark"] .highlight .m,
+[data-theme="dark"] .highlight .mi { color: #d19a66; }
+
+/* --- footer --- */
+footer {
+  background-color: var(--bj-surface);
+  border-top: 1px solid var(--bj-border);
+}
+
+footer .copyright,
+footer .theme-by,
+footer a {
+  color: var(--bj-muted);
+}
+
+footer a:hover {
+  color: var(--bj-accent);
+}
+
+/* --- landing page --- */
+.lp-hero {
+  border-bottom-color: var(--bj-border);
+}
+
+.lp-name {
+  color: var(--bj-text);
+}
+
+.lp-role,
+.lp-meta {
+  color: var(--bj-accent);
+}
+
+.lp-bio,
+.lp-desc {
+  color: var(--bj-muted);
+}
+
+.lp-links a,
+.lp-pdf {
+  color: var(--bj-muted);
+}
+
+.lp-links a:hover,
+.lp-pdf:hover {
+  color: var(--bj-accent);
+}
+
+.lp-sec h2 {
+  color: var(--bj-text);
+}
+
+.lp-sec::after {
+  background: var(--bj-border);
+}
+
+.lp-row {
+  border-bottom-color: var(--bj-hairline);
+}
+
+.lp-row:hover {
+  background: var(--bj-row-hover);
+}
+
+.lp-title a {
+  color: var(--bj-text);
+}
+
+.lp-title a:hover {
+  color: var(--bj-accent);
+}
+
+.lp-when {
+  color: var(--bj-muted);
+}
+
+[data-theme="dark"] .lp-avatar {
+  border-color: var(--bj-border);
+}
+
+/* --- toggle control --- */
+.theme-toggle {
+  background: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: var(--bj-text);
+  cursor: pointer;
+  font-size: 15px;
+  line-height: 1;
+  margin-left: 10px;
+  padding: 7px 9px;
+  transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+.theme-toggle:hover {
+  background-color: rgba(127, 127, 127, 0.14);
+  color: var(--bj-accent);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--bj-accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .theme-toggle,
+  .lp-row {
+    transition: none;
+  }
+}
