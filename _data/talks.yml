@@ -3,7 +3,7 @@
 # spaces and other unsafe characters are URL-escaped at build time.
 
 - year: 2025
-  venue: "Insomni'Hack and TROOPERS25"
+  venue: "Insomni'Hack & TROOPERS25"
   title: "Beyond LSASS: Cutting-Edge Techniques for Undetectable Threat Emulation"
   desc: "Entra ID credential-access tradecraft that avoids the detections built around LSASS."
   file: "EntraId_Cutting_Edge_Techniques_for_Undetectable_Threat_Emulation_Priyank_InsomniHack_2025.pdf"
