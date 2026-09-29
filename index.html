@@ -53,6 +53,27 @@ css:
   </div>
 {% endfor %}
 
+<div class="lp-sec" id="papers">
+  <h2>Published Papers</h2>
+  <span class="lp-count">{{ site.data.papers | size }}</span>
+</div>
+
+{% for paper in site.data.papers %}
+  {% assign abs = paper.arxiv | prepend: "https://arxiv.org/abs/" %}
+  <div class="lp-row">
+    <div class="lp-when">{{ paper.year }}</div>
+    <div class="lp-body">
+      <h3 class="lp-title"><a href="{{ abs }}">{{ paper.title | escape }}</a></h3>
+      <div class="lp-meta"><a href="{{ abs }}">arXiv:{{ paper.arxiv }}</a> [{{ paper.arxiv_class }}]</div>
+      {% if paper.desc %}<p class="lp-desc">{{ paper.desc | escape }}</p>{% endif %}
+      {% if paper.file %}
+        {% assign pdf = paper.file | prepend: site.talks_repo | uri_escape %}
+        <a class="lp-pdf" href="{{ pdf }}"><i class="fas fa-file-pdf"></i> PDF</a>
+      {% endif %}
+    </div>
+  </div>
+{% endfor %}
+
 <div class="lp-sec" id="writing">
   <h2>Writing &amp; Advisories</h2>
   <span class="lp-count">{{ site.posts | size }}</span>
