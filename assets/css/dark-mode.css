@@ -1,10 +1,15 @@
-/* Dark and light palettes. Additive by design: beautifuljekyll.css is
-   Liquid-processed from the _config.yml colours, so nothing there is edited.
-   The active theme comes from a data-theme attribute on <html>. */
+/* Dark theme. Additive: beautifuljekyll.css is Liquid-processed from the
+   _config.yml colours, so nothing there is edited.
+
+   Every override is scoped to html[data-theme="dark"] on purpose. head.html
+   emits site-css before page.css, so landing.css loads later and would win
+   any equal-specificity contest. The html + attribute + class combination
+   outranks it regardless of order, and leaves light mode exactly as-is. */
 
 :root {
   --bj-bg: #ffffff;
   --bj-surface: #eaeaea;
+  --bj-heading: #2b2b2b;
   --bj-text: #404040;
   --bj-muted: #777777;
   --bj-border: #dddddd;
@@ -16,219 +21,230 @@
   --bj-row-hover: #fafafa;
 }
 
-/* Typed against html so it outranks :root regardless of source order. */
 html[data-theme="dark"] {
   --bj-bg: #16191d;
   --bj-surface: #1b1f24;
-  --bj-text: #d8dbe0;
-  --bj-muted: #9aa2ad;
-  --bj-border: #2a2f36;
-  --bj-hairline: #23272d;
-  --bj-link: #63b8e8;
-  --bj-accent: #4fc3dd;
+  --bj-heading: #f2f5f9;   /* 16.1:1 on --bj-bg */
+  --bj-text: #dde1e7;      /* 13.4:1 */
+  --bj-muted: #a8b0bb;     /*  8.1:1 */
+  --bj-border: #313841;
+  --bj-hairline: #262b32;
+  --bj-link: #7cc6f0;
+  --bj-accent: #5fd0e8;    /*  9.6:1 */
   --bj-code-bg: #1a1e23;
-  --bj-code-text: #dfe3e8;
-  --bj-row-hover: #1d2127;
+  --bj-code-text: #e4e8ee;
+  --bj-row-hover: #1f242a;
 }
 
-html,
-body {
+html[data-theme="dark"],
+html[data-theme="dark"] body {
   background-color: var(--bj-bg);
   color: var(--bj-text);
 }
 
-a {
+html[data-theme="dark"] a {
   color: var(--bj-link);
 }
 
-a:hover,
-a:focus {
+html[data-theme="dark"] a:hover,
+html[data-theme="dark"] a:focus {
   color: var(--bj-accent);
 }
 
+html[data-theme="dark"] h1,
+html[data-theme="dark"] h2,
+html[data-theme="dark"] h3,
+html[data-theme="dark"] h4,
+html[data-theme="dark"] h5,
+html[data-theme="dark"] h6 {
+  color: var(--bj-heading);
+}
+
 /* --- navbar --- */
-.navbar-custom {
+html[data-theme="dark"] .navbar-custom {
   background-color: var(--bj-surface);
   border-bottom-color: var(--bj-border);
 }
 
-.navbar-custom .navbar-brand,
-.navbar-custom .navbar-nav .nav-link {
+html[data-theme="dark"] .navbar-custom .navbar-brand,
+html[data-theme="dark"] .navbar-custom .navbar-nav .nav-link {
   color: var(--bj-text);
 }
 
-.navbar-custom .navbar-brand:hover,
-.navbar-custom .navbar-nav .nav-link:hover {
+html[data-theme="dark"] .navbar-custom .navbar-brand:hover,
+html[data-theme="dark"] .navbar-custom .navbar-nav .nav-link:hover {
   color: var(--bj-accent);
 }
 
-[data-theme="dark"] .navbar-custom .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(216,219,224,0.85)' stroke-width='2' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+html[data-theme="dark"] .navbar-custom .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(221,225,231,0.9)' stroke-width='2' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
-[data-theme="dark"] .navbar-custom .dropdown-menu {
+html[data-theme="dark"] .navbar-custom .dropdown-menu {
   background-color: var(--bj-surface);
   border-color: var(--bj-border);
 }
 
-[data-theme="dark"] .navbar-custom .dropdown-item {
+html[data-theme="dark"] .navbar-custom .dropdown-item {
   color: var(--bj-text);
 }
 
-[data-theme="dark"] .navbar-custom .dropdown-item:hover {
+html[data-theme="dark"] .navbar-custom .dropdown-item:hover {
   background-color: var(--bj-row-hover);
   color: var(--bj-accent);
 }
 
 /* --- page furniture --- */
-.intro-header,
-.intro-header.no-img {
+html[data-theme="dark"] .intro-header,
+html[data-theme="dark"] .intro-header.no-img {
   background-color: transparent;
 }
 
-hr,
-.intro-header .page-heading hr {
+html[data-theme="dark"] hr,
+html[data-theme="dark"] .intro-header .page-heading hr {
   border-color: var(--bj-border);
 }
 
-blockquote {
+html[data-theme="dark"] blockquote {
   color: var(--bj-muted);
   border-left-color: var(--bj-border);
 }
 
-table,
-table th,
-table td {
+html[data-theme="dark"] table,
+html[data-theme="dark"] table th,
+html[data-theme="dark"] table td {
   border-color: var(--bj-border) !important;
 }
 
-[data-theme="dark"] table th {
+html[data-theme="dark"] table th {
   background-color: var(--bj-surface);
 }
 
-[data-theme="dark"] .post-meta,
-[data-theme="dark"] .post-subtitle,
-[data-theme="dark"] .page-subheading,
-[data-theme="dark"] .post-entry {
+html[data-theme="dark"] .post-meta,
+html[data-theme="dark"] .post-subtitle,
+html[data-theme="dark"] .page-subheading,
+html[data-theme="dark"] .post-entry {
   color: var(--bj-muted);
 }
 
-[data-theme="dark"] .post-preview {
+html[data-theme="dark"] .post-title,
+html[data-theme="dark"] .post-preview a {
+  color: var(--bj-heading);
+}
+
+html[data-theme="dark"] .post-preview {
   border-bottom-color: var(--bj-border);
 }
 
-[data-theme="dark"] .blog-tags a {
+html[data-theme="dark"] .blog-tags a {
   color: var(--bj-link);
 }
 
 /* --- code --- */
-pre,
-code {
+html[data-theme="dark"] pre,
+html[data-theme="dark"] code,
+html[data-theme="dark"] .highlight,
+html[data-theme="dark"] .highlighter-rouge .highlight {
   background-color: var(--bj-code-bg);
   color: var(--bj-code-text);
-}
-
-[data-theme="dark"] pre,
-[data-theme="dark"] .highlight,
-[data-theme="dark"] .highlighter-rouge .highlight {
-  background-color: var(--bj-code-bg);
   border-color: var(--bj-border);
 }
 
 /* Rouge tokens, retuned for the dark background. */
-[data-theme="dark"] .highlight .c,
-[data-theme="dark"] .highlight .c1,
-[data-theme="dark"] .highlight .cm { color: #6f7b88; }
-[data-theme="dark"] .highlight .k,
-[data-theme="dark"] .highlight .kd,
-[data-theme="dark"] .highlight .kn { color: #c698e0; }
-[data-theme="dark"] .highlight .s,
-[data-theme="dark"] .highlight .s1,
-[data-theme="dark"] .highlight .s2 { color: #9ad18b; }
-[data-theme="dark"] .highlight .nt { color: #63b8e8; }
-[data-theme="dark"] .highlight .na { color: #e3c07b; }
-[data-theme="dark"] .highlight .nf { color: #74c0d8; }
-[data-theme="dark"] .highlight .m,
-[data-theme="dark"] .highlight .mi { color: #d19a66; }
+html[data-theme="dark"] .highlight .c,
+html[data-theme="dark"] .highlight .c1,
+html[data-theme="dark"] .highlight .cm { color: #8a95a3; }
+html[data-theme="dark"] .highlight .k,
+html[data-theme="dark"] .highlight .kd,
+html[data-theme="dark"] .highlight .kn { color: #d3aaea; }
+html[data-theme="dark"] .highlight .s,
+html[data-theme="dark"] .highlight .s1,
+html[data-theme="dark"] .highlight .s2 { color: #a9dc9b; }
+html[data-theme="dark"] .highlight .nt { color: #7cc6f0; }
+html[data-theme="dark"] .highlight .na { color: #ecc98b; }
+html[data-theme="dark"] .highlight .nf { color: #86cfe6; }
+html[data-theme="dark"] .highlight .m,
+html[data-theme="dark"] .highlight .mi { color: #e0a87a; }
 
 /* --- footer --- */
-footer {
+html[data-theme="dark"] footer {
   background-color: var(--bj-surface);
   border-top: 1px solid var(--bj-border);
 }
 
-footer .copyright,
-footer .theme-by,
-footer a {
+html[data-theme="dark"] footer .copyright,
+html[data-theme="dark"] footer .theme-by,
+html[data-theme="dark"] footer a {
   color: var(--bj-muted);
 }
 
-footer a:hover {
+html[data-theme="dark"] footer a:hover {
   color: var(--bj-accent);
 }
 
 /* --- landing page --- */
-.lp-hero {
+html[data-theme="dark"] .lp-hero {
   border-bottom-color: var(--bj-border);
 }
 
-.lp-name {
-  color: var(--bj-text);
+html[data-theme="dark"] .lp-name {
+  color: var(--bj-heading);
 }
 
-.lp-role,
-.lp-meta {
+html[data-theme="dark"] .lp-role,
+html[data-theme="dark"] .lp-meta {
   color: var(--bj-accent);
 }
 
-.lp-bio,
-.lp-desc {
+html[data-theme="dark"] .lp-bio,
+html[data-theme="dark"] .lp-desc {
   color: var(--bj-muted);
 }
 
-.lp-links a,
-.lp-pdf {
+html[data-theme="dark"] .lp-links a,
+html[data-theme="dark"] .lp-pdf {
   color: var(--bj-muted);
 }
 
-.lp-links a:hover,
-.lp-pdf:hover {
+html[data-theme="dark"] .lp-links a:hover,
+html[data-theme="dark"] .lp-pdf:hover {
   color: var(--bj-accent);
 }
 
-.lp-sec h2 {
-  color: var(--bj-text);
+html[data-theme="dark"] .lp-sec h2 {
+  color: var(--bj-heading);
 }
 
-.lp-sec::after {
+html[data-theme="dark"] .lp-sec::after {
   background: var(--bj-border);
 }
 
-.lp-row {
+html[data-theme="dark"] .lp-row {
   border-bottom-color: var(--bj-hairline);
 }
 
-.lp-row:hover {
+html[data-theme="dark"] .lp-row:hover {
   background: var(--bj-row-hover);
 }
 
-.lp-title a {
-  color: var(--bj-text);
+html[data-theme="dark"] .lp-title a {
+  color: var(--bj-heading);
 }
 
-.lp-title a:hover {
+html[data-theme="dark"] .lp-title a:hover {
   color: var(--bj-accent);
 }
 
-.lp-when {
+html[data-theme="dark"] .lp-when,
+html[data-theme="dark"] .lp-count {
   color: var(--bj-muted);
 }
 
-[data-theme="dark"] .lp-avatar {
+html[data-theme="dark"] .lp-avatar {
   border-color: var(--bj-border);
 }
 
-/* --- toggle control --- */
+/* --- toggle control, styled for both themes --- */
 .theme-toggle {
   background: none;
   border: 1px solid transparent;
@@ -243,7 +259,7 @@ footer a:hover {
 }
 
 .theme-toggle:hover {
-  background-color: rgba(127, 127, 127, 0.14);
+  background-color: rgba(127, 127, 127, 0.16);
   color: var(--bj-accent);
 }
 
