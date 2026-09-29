@@ -2,6 +2,19 @@
 # `file` must match the filename in the Talks-Publications repo exactly;
 # spaces and other unsafe characters are URL-escaped at build time.
 
+- year: 2026
+  venue: "BSides Las Vegas"
+  title: "Open Relays in 2026: Red Team Initial Access Vectors"
+  desc: "Red Team Initial-access TTPs built on open and trusted email relays."
+  file: "OpenRelays2026-BsidesLV.pdf"
+
+# TODO: title and description inferred from the filename.
+- year: 2026
+  venue: "LayerOne"
+  title: "Modern HTML Injection Exploitation"
+  desc: "Turning HTML injection into impact against current browser and framework defences."
+  file: "LayerOne 2026 - Modern HTML Injection Exploitation-laptop-014500.pdf"
+
 - year: 2025
   venue: "Insomni'Hack & TROOPERS25"
   title: "Beyond LSASS: Cutting-Edge Techniques for Undetectable Threat Emulation"

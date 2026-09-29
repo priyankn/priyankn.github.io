@@ -169,6 +169,15 @@
   color: #0085A1;
 }
 
+/* Inherit so the arXiv reference tracks the meta colour in either theme. */
+.lp-meta a {
+  color: inherit;
+}
+
+.lp-meta a:hover {
+  text-decoration: underline;
+}
+
 .lp-desc {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 14.5px;

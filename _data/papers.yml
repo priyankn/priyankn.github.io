@@ -1,0 +1,9 @@
+# Published papers, newest first.
+# `arxiv` is the bare identifier; the landing page builds the abs link from it.
+# `file` is the optional copy in the Talks-Publications repo.
+
+- year: 2026
+  title: "Trusted Workflow Relays: Cross-Tenant Email Abuse and Composable Red Team Initial-Access Primitives in Multi-Tenant Clouds"
+  arxiv: "2608.17361"
+  arxiv_class: "cs.CR"
+  file: "Trusted Workflow Relays:Cross-Tenant Email Abuse and Composable Red Team Initial-Access Primitives in Multi-Tenant Clouds.pdf"
